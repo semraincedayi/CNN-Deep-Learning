@@ -4,9 +4,9 @@
 
 ## 📘 Proje Hakkında / Project Overview
 
-Bu proje, farklı pirinç türlerini sınıflandırmak için Convolutional Neural Network (CNN) tabanlı bir derin öğrenme modeli geliştirmeyi amaçlamaktadır. Veri seti Kaggle’dan alınmıştır ve model pirinç görsellerini kullanarak türlerini otomatik olarak tanımayı öğrenmektedir.
+Bu proje, farklı pirinç türlerini sınıflandırmak için Convolutional Neural Network (CNN) tabanlı bir derin öğrenme modeli geliştirmeyi amaçlamaktadır. Veri seti Kaggle’dan alınmış ve repoda her pirinç türü için ayrı klasörlerde organize edilmiştir. Model, pirinç görsellerini kullanarak türlerini otomatik olarak tanımayı öğrenmektedir.
 
-This project aims to develop a Convolutional Neural Network (CNN)-based deep learning model to classify different rice varieties. The dataset was obtained from Kaggle, and the model learns to automatically recognize rice types from images.
+This project aims to develop a Convolutional Neural Network (CNN)-based deep learning model to classify different rice varieties. The dataset was obtained from Kaggle and organized in separate folders for each rice variety. The model learns to automatically recognize rice types from images.
 
 ## 🔍 Amaç / Objective
 
@@ -20,9 +20,9 @@ This project aims to develop a Convolutional Neural Network (CNN)-based deep lea
 
 ## 📊 Veri Seti / Dataset
 
-Veri seti, Kaggle üzerinde bulunan pirinç türleri görsellerinden oluşmaktadır. Her bir görsel, bir pirinç türünü temsil eder ve model bu görseller üzerinden sınıflandırma yapar.
+Veri seti, Kaggle üzerinde bulunan pirinç türleri görsellerinden oluşmaktadır ve repoda her tür için ayrı klasörlerde organize edilmiştir: `Arborio/`, `Basmati/`, `Ipsala/`, `Jasmine/`, `Karacadag/`.
 
-The dataset consists of images of rice varieties available on Kaggle. Each image represents a rice type, and the model classifies based on these images.
+The dataset consists of images of rice varieties available on Kaggle and organized in separate folders in the repo: `Arborio/`, `Basmati/`, `Ipsala/`, `Jasmine/`, `Karacadag/`.
 
 ## 🧪 Yöntem / Methodology
 
@@ -53,19 +53,21 @@ The model demonstrated high accuracy on the test dataset and can successfully cl
 ```
 CNN-Deep-Learning/
 │
-├── dataset/               # Kaggle'dan alınan pirinç görselleri / Rice images from Kaggle
-├── cnn_model.py           # CNN modelinin tanımı ve eğitimi / CNN model definition and training
-├── preprocess.py          # Veri ön işleme kodları / Data preprocessing scripts
-├── requirements.txt       # Gerekli Python kütüphaneleri / Required Python libraries
+├── Arborio/              # Arborio pirinci görselleri / Arborio rice images
+├── Basmati/              # Basmati pirinci görselleri / Basmati rice images
+├── Ipsala/               # Ipsala pirinci görselleri / Ipsala rice images
+├── Jasmine/              # Jasmine pirinci görselleri / Jasmine rice images
+├── Karacadag/            # Karacadag pirinci görselleri / Karacadag rice images
+├── riceclassification.py # CNN modelinin tanımı ve eğitimi / CNN model definition and training
 └── README.md              # Proje hakkında bilgi / Project information
 ```
 
 ## 🛠️ Kurulum / Installation
 
-Gerekli Python kütüphanelerini yüklemek için:
+Gerekli Python kütüphanelerini yüklemek için aşağıdaki paketleri manuel olarak yükleyebilirsiniz:
 
-To install the required Python libraries:
+To run the project, manually install the required Python libraries:
 
 ```bash
-pip install -r requirements.txt
+pip install tensorflow numpy matplotlib opencv-python scikit-learn
 ```
